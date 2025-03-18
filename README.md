@@ -91,7 +91,7 @@ Ideas? Suggestions? Random thoughts at 3 AM? **We want them all!** 🚀 Open a p
 Need help? Want to chat? Just want to send memes? Hit us up! 📩
 
 📧 **Email**: [sharmamagi0@gmail.com](mailto:sharmamagi0@gmail.com) 📬  
-📸 **Instagram**: [shxrxmx._xo](https://www.instagram.com/shxrxmx._xo) 📷
+📸 **Instagram**: [shxrxmx._xo](https://www.instagram.com/shxrmx._xo) 📷
 
 ---
 
