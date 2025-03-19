@@ -1,18 +1,30 @@
 {
-    "manifest_version": 3,
-    "name": "Magi8101 Extension",
-    "version": "1.0.0",
-    "description": "Browser extension created by magi8101 on 2025-03-19",
-    "author": "magi8101",
-    "action": {
-      "default_popup": "index.html"
-    },
-    "permissions": [],
-    "host_permissions": [],
-    "web_accessible_resources": [
-      {
-        "resources": ["script.js", "styles.css"],
-        "matches": ["<all_urls>"]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "Financial Dashboard",
+  "version": "1.0.0",
+  "description": "Browser extension created by magi8101 on 2025-03-19",
+  "author": "magi8101",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js", "*.css", "libs/*", "images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
