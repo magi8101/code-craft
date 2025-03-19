@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Magi8101 Extension",
+    "version": "1.0.0",
+    "description": "Browser extension created by magi8101 on 2025-03-19",
+    "author": "magi8101",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [],
+    "host_permissions": [],
+    "web_accessible_resources": [
+      {
+        "resources": ["script.js", "styles.css"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }

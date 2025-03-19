@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that go beyond Tailwind */
+.bg-blue-600 {
+    background-color: #1A56DB;
+}
+
+.text-teal-500 {
+    color: #4FD1C5;
+}
+
+.bg-green-50 {
+    background-color: #e6f7f5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .flex.gap-4.mt-6 {
+        flex-direction: column;
+    }
+    
+    .w-2/3, .w-1/3 {
+        width: 100%;
+    }
+}
