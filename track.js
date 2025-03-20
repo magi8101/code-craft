@@ -57,7 +57,8 @@ function evaluateMouseData() {
   console.log("  Speed Standard Deviation:", stdDev.toFixed(2));
 
   // Heuristic for classification:
-  // - Low variation in speed (stdDev < 10) or low overall speed (avgSpeed < 30) may indicate bot-like behavior.
+  // - Low variation in speed (stdDev < 10) or low overall speed (avgSpeed < 30)
+  //   may indicate bot-like behavior.
   const classification = stdDev < 10 || avgSpeed < 30 ? 1 : 0;
   console.log("Classification:", classification); // 0 for human, 1 for bot
   console.log("Full Mouse Data:", mouseData);
@@ -90,5 +91,5 @@ function initMouseTracking() {
   document.addEventListener("mousemove", trackMouse);
 }
 
-// Start tracking mouse movements when the background script loads.
+// Start tracking mouse movements when the script loads.
 initMouseTracking();
