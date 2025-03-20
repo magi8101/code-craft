@@ -2,268 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base Reset & Optimized Graph Display */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  background-color: #f5f7fa;
-  color: #1f2937;
-  width: 680px;
-  min-width: 500px;
-  max-width: 800px;
-  overflow-x: hidden;
-  padding: 18px !important;
-  font-size: 15px;
-}
-
-/* Headers styling */
-h1 {
-  font-size: 26px;
-  margin-bottom: 18px;
-  color: #1a202c;
-}
-
-h2 {
-  font-size: 22px;
-  margin-bottom: 14px;
-  color: #2d3748;
-}
-
-h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #4a5568;
-}
-
-/* Container sizing - optimized for graph display */
-.container, .max-w-4xl {
-  width: 100% !important;
-  max-width: 680px !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-}
-
-/* Top section */
-header {
-  margin-bottom: 22px !important;
-  padding-bottom: 14px !important;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Card containers - enhanced with subtle shadows */
-.card, .bg-white, .shadow, .rounded-lg {
-  padding: 22px !important;
-  margin-bottom: 24px !important;
-  border-radius: 14px !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02) !important;
-  background: #ffffff !important;
-  transition: all 0.3s ease-in-out !important;
-}
-
-.card:hover, .bg-white:hover, .shadow:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07), 0 5px 15px rgba(0, 0, 0, 0.03) !important;
-  transform: translateY(-2px);
-}
-
-/* Balance section */
-.text-5xl, .text-4xl, .text-3xl {
-  font-size: 32px !important;
-  line-height: 1.3 !important;
-  font-weight: 700 !important;
-}
-
-/* Row layouts */
-.flex.flex-row {
-  flex-direction: row !important;
-  gap: 20px !important;
-}
-
-/* Grid adjustments */
-.grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-  gap: 20px !important;
-}
-
-/* ===== ENHANCED GRAPH STYLING ===== */
-/* Chart containers - SIGNIFICANTLY LARGER with impressive styling */
-.chart-container, .graph-container, .chart-wrapper, .graph-box {
-  position: relative !important;
-  width: 100% !important;
-  height: 380px !important; /* Much taller for dramatic effect */
-  max-height: 450px !important;
-  margin-bottom: 25px !important;
-  padding: 15px !important;
-  border-radius: 12px !important;
-  background: linear-gradient(to bottom right, #ffffff, #f8fafc) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
-  border: 1px solid rgba(226, 232, 240, 0.8) !important;
-  overflow: hidden !important;
-}
-
-/* Canvas styling - make charts pop with impressive sizing */
-canvas {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 380px !important;
-  transition: all 0.3s ease !important;
-}
-
-/* Chart hover effects */
-.chart-container:hover, .graph-container:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
-  border-color: rgba(203, 213, 224, 0.8) !important;
-}
-
-/* Chart titles and legends */
-.chart-title, .graph-title {
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  color: #2d3748 !important;
-  margin-bottom: 12px !important;
-  text-align: center !important;
-}
-
-/* Chart labels and data points */
-.chart-label, .legend-item {
-  font-size: 14px !important;
-  color: #4a5568 !important;
-  font-weight: 500 !important;
-}
-
-/* Map container styling - matching chart impressiveness */
-#map {
-  height: 380px !important;
-  width: 100% !important;
-  border-radius: 12px !important;
-  margin-bottom: 25px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
-  border: 1px solid rgba(226, 232, 240, 0.8) !important;
-}
-
-/* ===== GENERAL STYLING ===== */
-/* Button styling - more polished */
-button, .btn {
-  padding: 12px 18px !important;
-  font-size: 15px !important;
-  border-radius: 8px !important;
-  font-weight: 500 !important;
-  transition: all 0.2s ease !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08) !important;
-}
-
-button:hover, .btn:hover {
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12) !important;
-}
-
-/* Icon sizing and styling */
-svg, img.icon {
-  width: 22px !important;
-  height: 22px !important;
-  vertical-align: middle !important;
-}
-
-/* Transaction list */
-.transaction-list {
-  max-height: 400px;
-  overflow-y: auto;
-  border-radius: 8px;
-  background: #fafafa;
-  padding: 10px !important;
-}
-
-.transaction-item {
-  padding: 14px 10px !important;
-  font-size: 15px !important;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-  transition: background-color 0.2s ease;
-}
-
-.transaction-item:hover {
-  background-color: rgba(0,0,0,0.02);
-}
-
-/* Scrollbar styling - sleeker appearance */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c5c9d1;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a3a8b1;
-}
-
-/* Form inputs - more polished */
-input, select, textarea {
-  font-size: 15px !important;
-  padding: 12px 14px !important;
-  border-radius: 8px !important;
-  border: 1px solid #e2e8f0 !important;
-  background: #f8fafc !important;
-  transition: all 0.2s ease !important;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #3b82f6 !important;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
-  outline: none !important;
-}
-
-/* Width utilities */
-.w-full { width: 100% !important; }
-.w-1/2 { width: 49% !important; display: inline-block; vertical-align: top; }
-.w-1/3 { width: 32% !important; display: inline-block; vertical-align: top; }
-.w-2/3 { width: 66% !important; display: inline-block; vertical-align: top; }
-
-/* Handle specific financial dashboard elements */
-.balance-display {
-  font-size: 32px !important;
-  font-weight: bold !important;
-  background: linear-gradient(90deg, #1A56DB, #3182CE) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-}
-
-.transaction-amount {
-  font-weight: 600 !important;
-  font-size: 16px !important;
-}
-
-.transaction-date {
-  font-size: 12px !important;
-  color: #718096 !important;
-}
-
-/* Color enhancement for primary elements */
+/* Custom styles that go beyond Tailwind */
 .bg-blue-600 {
-  background: linear-gradient(135deg, #1E40AF, #1A56DB) !important;
+    background-color: #1A56DB;
 }
 
-.text-blue-600 {
-  color: #1A56DB !important;
+.text-teal-500 {
+    color: #4FD1C5;
 }
 
-/* Add subtle animation for data updates */
-@keyframes pulse-subtle {
-  0% { opacity: 1; }
-  50% { opacity: 0.8; }
-  100% { opacity: 1; }
+.bg-green-50 {
+    background-color: #e6f7f5;
 }
 
-.data-update {
-  animation: pulse-subtle 1.5s ease-in-out;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .flex.gap-4.mt-6 {
+        flex-direction: column;
+    }
+    
+    .w-2/3, .w-1/3 {
+        width: 100%;
+    }
 }
